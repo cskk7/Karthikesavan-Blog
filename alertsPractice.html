@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerts</title>
+    <style type="text/css">
+        button{
+            padding: 20px 30px;
+            font-size: 40px;
+            overflow: none;
+            border-radius: 100px;
+            margin-left: 480px;
+        }
+    </style>
+    <script type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function show_alert() {
+            alert("I am an alert box!");
+        }
+
+        function show_confirm() {
+            confirm("I am a confirm alert")
+        }
+
+        function show_prompt() {
+            prompt("I am a confirm alert")
+        }
+    </script>
+</head>
+<body>
+
+<div class="page-body">
+
+
+    <h1 style="font-size: 345px0px; margin-left: 450px; border: none;">TESTING PRACTICE FOR</h1>
+    <h2 style="font-size: 35px; margin-left: 450px; border: none;">Alert Box, Confirm Box and Prompt Box</h1>
+    <div class="centered">
+        <button class="styled-click-button" id="alertexamples"  onclick="show_alert()" value="Show alert box">Alert</button>
+    </div>
+    <br>
+    <div class="centered">
+        <button class="styled-click-button" id="confirmexample" onclick="show_confirm()" value="Show confirm box">Confirm</button>
+    </div>
+    <br>
+    <div class="centered">
+        <button class="styled-click-button" id="promptexample" onclick="show_prompt()" value="Show prompt box">Prompt</button>
+    </div>
+</div>
+
+</body>
+</html>
