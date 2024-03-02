@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerts</title>
+</head>
+<body>  
+
+    <h3 style="font-size: 345px0px; margin-left: 450px; border: none;">PAGE DIVIDER</h3>
+    <script>
+              const firstPage = parseFloat(prompt ('Enter the 1st page: '));  
+              const lastPage = parseFloat(prompt ('Enter the last page: '));  
+          
+              let result = "";
+              const testerNames = ["Dhanushpriyan", "Manigandan", "Hemanth Kumar", "Prasanna SK", "Shaveen Kumar"];
+              const tester = 5;
+              const target = Math.floor((lastPage - firstPage) / tester);
+              const adjustment = (lastPage - firstPage + 1) % tester;
+              const dividedPages = new Array(tester);
+              const startingPages = new Array(tester);
+              const endingPages = new Array(tester);
+                  for (let i = 0; i < tester; i++) {
+                          dividedPages[i] = Math.floor((lastPage / tester) * i);
+                  }
+                  if (adjustment === 0 || adjustment === 1) {
+                      endingPages[tester - 1] = lastPage;
+                      startingPages[0] = dividedPages[0] + firstPage;
+                      endingPages[0] = startingPages[0] + target;
+                      for (let i = 1; i < tester - 1; i++) {
+                          startingPages[i] = endingPages[i - 1] + 1;
+                          endingPages[i] = startingPages[i] + target;
+                      }
+                      startingPages[tester - 1] = endingPages[tester - 2] + 1;
+                  }
+                  if (adjustment === 4) {
+                  startingPages[0] = dividedPages[0] + firstPage;
+                  endingPages[0] = startingPages[0] + target;
+                  startingPages[1] = endingPages[0] + 1;
+                  endingPages[1] = startingPages[1] + target;
+                  startingPages[2] = endingPages[1] + 1;
+                  endingPages[2] = startingPages[2] + target;
+                  startingPages[3] = endingPages[2] + 1;
+                  endingPages[3] = startingPages[3] + target;
+                  startingPages[4] = endingPages[3] + 1;
+                  endingPages[4] = lastPage;
+                  }
+                  if (adjustment === 3) {
+                      startingPages[0] = dividedPages[0] + firstPage;
+                      endingPages[0] = startingPages[0] + target;
+                      startingPages[1] = endingPages[0] + 1;
+                      endingPages[1] = startingPages[1] + target;
+                      startingPages[2] = endingPages[1] + 1;
+                      endingPages[2] = startingPages[2] + target;
+                      startingPages[3] = endingPages[2] + 1;
+                      endingPages[3] = startingPages[3] + target - 1;
+                      startingPages[4] = endingPages[3] + 1;
+                      endingPages[4] = lastPage;
+                  }
+                  if (adjustment === 2) {
+                      startingPages[0] = dividedPages[0] + 1;
+                      endingPages[0] = startingPages[0] + target;
+                      startingPages[1] = endingPages[0] + 1;
+                      endingPages[1] = startingPages[1] + target;
+                      startingPages[2] = endingPages[1] + 1;
+                      endingPages[2] = startingPages[2] + target - 1;
+                      startingPages[3] = endingPages[2] + 1;
+                      endingPages[3] = startingPages[3] + target - 1;
+                      startingPages[4] = endingPages[3] + 1;
+                      endingPages[4] = lastPage;
+                  }
+                  for (let i = 0; i < tester; i++) {
+                      result = result + testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")\n";
+                  }
+                  window.alert(result);  
+
+          </script>
+
+</body>
+</html>
