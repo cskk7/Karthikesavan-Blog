@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alerts</title>
+    <title>PAGE DIVIDER FOR TASKS</title>
 </head>
 <body>  
 
@@ -73,11 +73,9 @@
                       result = result + testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")\n";
                   }
                   window.alert(result);  
-                  document.writeln(testerNames[0] + " " + startingPages[0] + " - " + endingPages[0] + "(" + (endingPages[0] - startingPages[0] + 1) + ")");
-                  document.writeln(testerNames[1] + " " + startingPages[1] + " - " + endingPages[1] + "(" + (endingPages[1] - startingPages[1] + 1) + ")");
-                  document.writeln(testerNames[2] + " " + startingPages[2] + " - " + endingPages[2] + "(" + (endingPages[2] - startingPages[2] + 1) + ")");
-                  document.writeln(testerNames[3] + " " + startingPages[3] + " - " + endingPages[3] + "(" + (endingPages[3] - startingPages[3] + 1) + ")");
-                  document.writeln(testerNames[4] + " " + startingPages[4] + " - " + endingPages[4] + "(" + (endingPages[4] - startingPages[4] + 1) + ")");
+                  for (let i = 0; i < tester; i++) {
+                      document.writeln(testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                  }
 
           </script>
 
