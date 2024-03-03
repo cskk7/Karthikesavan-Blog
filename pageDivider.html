@@ -96,6 +96,22 @@
                         startingPages[4] = endingPages[3] + 1;
                         endingPages[4] = lastPage;
                     }
+                    if(adjustment == 1){
+                        startingPages[0] = dividedPages[0] + firstPage;
+                        endingPages[0] = startingPages[0] + target - 1;
+
+                        startingPages[1] = endingPages[0] + 1;
+                        endingPages[1] = startingPages[1] + target - 1;
+
+                        startingPages[2] = endingPages[1] + 1;
+                        endingPages[2] = startingPages[2] + target - 1;
+
+                        startingPages[3] = endingPages[2] + 1;
+                        endingPages[3] = startingPages[3] + target - 1;
+
+                        startingPages[4] = endingPages[3] + 1;
+                        endingPages[4] = lastPage;
+                    }
                     for (let i = 0; i < tester; i++) {
                         result = result + testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")\n";
                     }
