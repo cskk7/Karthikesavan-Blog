@@ -94,7 +94,8 @@
                     }
                     window.alert(result);  
                     for (let i = 0; i < tester; i++) {
-                        document.writeln(testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                        document.writeln(testerNames[i]);
+                        document.write("<br>");
                     }
   
             </script>
@@ -102,7 +103,8 @@
         <div class="tasks" style="color: black;">
             <script>
                  for (let i = 0; i < tester; i++) {
-                        document.writeln(endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                        document.writeln(startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                        document.write("<br>");
                     }
             </script>
         </div>
