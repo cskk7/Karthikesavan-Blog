@@ -7,14 +7,17 @@
         div{
             display: flex;
             justify-content: space-around;
-            flex-direction: column;
+        }
+        .sec{
+            display: flex;
+            justify-content:center;
+            margin-top: 80px;
         }
         .names{
             border:1px;
             /* border-color: black; */
             border-style: solid;
             padding-left: 12px;
-            margin-left: 450px;
             width: 350px;
         }
         .tasks{
@@ -22,16 +25,15 @@
             /* border-color: black; */
             border-style: solid;
             padding-left: 12px;
-            margin-left: 400px;
-            width: 200px;
+            width: 250px;
         }
     </style>
 </head>
 <body>  
     
-
+  <h3>The Tasks divided among testers are as follows</h3>
     <!-- <h3 style="font-size: 345px0px; margin-left: 450px; border: none;">PAGE DIVIDER</h3> <br> -->
-    <main class="sec"  style="font-size: 25px;">
+    <main class="sec"  style="font-size: 30px;">
         <div class="names" style="color: black;">
             <script>
                 const firstPage = parseFloat(prompt ('Enter the 1st page: '));  
