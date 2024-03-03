@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PAGE DIVIDER FOR TASKS</title> <style type="text/css">
-        div{
+        .names{
             border:1px;
             /* border-color: black; */
             border-style: solid;
             padding-left: 12px;
             margin-left: 450px;
             width: 350px;
+        }
+        .tasks{
+            border:1px;
+            /* border-color: black; */
+            border-style: solid;
+            padding-left: 12px;
+            margin-left: 800px;
+            width: 200px;
         }
     </style>
 </head>
@@ -19,7 +27,7 @@
 
     <h3 style="font-size: 345px0px; margin-left: 450px; border: none;">PAGE DIVIDER</h3> <br>
     <main class="nav"  style="font-size: 25px;">
-        <div class="laptop" style="color: black;">
+        <div class="names" style="color: black;">
             <script>
                 const firstPage = parseFloat(prompt ('Enter the 1st page: '));  
                 const lastPage = parseFloat(prompt ('Enter the last page: '));  
@@ -90,6 +98,14 @@
                         document.write("<br>");
                     }
   
+            </script>
+        </div>
+        <div class="tasks" style="color: black;">
+            <script>
+                 for (let i = 0; i < tester; i++) {
+                        document.writeln(testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                        document.write("<br>");
+                    }
             </script>
         </div>
     </main>
