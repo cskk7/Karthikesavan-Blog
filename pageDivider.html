@@ -17,7 +17,7 @@
             /* border-color: black; */
             border-style: solid;
             padding-left: 12px;
-            margin-left: 824Spx;
+            margin-left: 800Spx;
             width: 200px;
         }
     </style>
@@ -95,7 +95,6 @@
                     window.alert(result);  
                     for (let i = 0; i < tester; i++) {
                         document.writeln(testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
-                        document.write("<br>");
                     }
   
             </script>
@@ -103,8 +102,7 @@
         <div class="tasks" style="color: black;">
             <script>
                  for (let i = 0; i < tester; i++) {
-                        document.writeln(testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
-                        document.write("<br>");
+                        document.writeln(endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
                     }
             </script>
         </div>
