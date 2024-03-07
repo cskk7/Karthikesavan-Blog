@@ -28,6 +28,13 @@
             padding-left: 12px;
             width: 250px;
         }
+        .gchat{
+            border:1px;
+            /* border-color: black; */
+            border-style: solid;
+            padding-left: 12px;
+            width: 250px;
+        }
     </style>
 </head>
 <body>  
@@ -132,7 +139,16 @@
                     }
             </script>
         </div>
+        <section class="gchat" style="color: black; ">
+            <script>
+                document.writeln("Today's task");
+                document.writeln("Title:");
+                 for (let i = 0; i < tester; i++) {
+                        document.writeln(testerNames[i] + " : " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                    }
+            </script>
+        </section>
     </main>
-
+    
 </body>
 </html>
