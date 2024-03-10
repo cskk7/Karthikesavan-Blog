@@ -9,7 +9,7 @@
             display: flex;
             justify-content: space-around;
         }
-        .sec{
+        .tab1{
             display: flex;
             justify-content:center;
             margin-top: 80px;
@@ -19,7 +19,7 @@
             /* border-color: black; */
             border-style: solid;
             padding-left: 12px;
-            width: 350px;
+            width: 200px;
         }
         .tasks{
             border:1px;
@@ -33,7 +33,7 @@
             /* border-color: black; */
             border-style: solid;
             padding-left: 12px;
-            width: 250px;
+            width: 330px;
         }
     </style>
 </head>
@@ -41,7 +41,8 @@
     
   <h3>The Tasks divided among testers are as follows</h3>
     <!-- <h3 style="font-size: 345px0px; margin-left: 450px; border: none;">PAGE DIVIDER</h3> <br> -->
-    <main class="sec"  style="font-size: 20px;">
+    <main class="main"  style="font-size: 20px;">
+        <section class="tab1"  style="font-size: 20px;">
         <div class="names" style="color: black;">
             <script>
                 const firstPage = parseFloat(prompt ('Enter the 1st page: '));  
@@ -120,8 +121,30 @@
                         startingPages[4] = endingPages[3] + 1;
                         endingPages[4] = lastPage;
                     }
+                    function shuffle(array) {
+                        let currentIndex = array.length,  randomIndex;
+
+                        // While there remain elements to shuffle.
+                        while (currentIndex > 0) {
+
+                        // Pick a remaining element.
+                        randomIndex = Math.floor(Math.random() * currentIndex);
+                        currentIndex--;
+
+                        // And swap it with the current element.
+                        [array[currentIndex], array[randomIndex]] = [
+                        array[randomIndex], array[currentIndex]];
+                        }
+
+                        return array;
+                    }
+                    var resultantArray = new Array(tester);
+                    for(i = 0; i < tester; i++){
+                        resultantArray[i] = startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")";
+                    }
+                    const anchorArray = shuffle(resultantArray);
                     for (let i = 0; i < tester; i++) {
-                        result = result + testerNames[i] + " " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")\n";
+                        result = result + testerNames[i] + " " + anchorArray[i] + "\n";
                     }
                     window.alert(result);  
                     for (let i = 0; i < tester; i++) {
@@ -134,17 +157,19 @@
         <div class="tasks" style="color: black; ">
             <script>
                  for (let i = 0; i < tester; i++) {
-                        document.writeln(startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                        document.writeln(anchorArray[i]);
                         document.write("<br>");
                     }
             </script>
         </div>
+    </section>
         <section class="gchat" style="color: black; ">
             <script>
-                document.writeln("Today's task");
+                document.writeln("Today's task ");
                 document.writeln("Title:");
+                document.write("<br>");
                  for (let i = 0; i < tester; i++) {
-                        document.writeln(testerNames[i] + " : " + startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")");
+                        document.writeln(testerNames[i] + " : " + anchorArray[i]);
                         document.write("<br>");
                     }
             </script>
