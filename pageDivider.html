@@ -146,13 +146,13 @@
                     for(i = 0; i < tester; i++){
                         resultantArray[i] = startingPages[i] + " - " + endingPages[i] + "(" + (endingPages[i] - startingPages[i] + 1) + ")";
                     }
-                    const anchorArray = shuffle(resultantArray);
+                    const anchorArray = shuffle(testerNames);
                     for (let i = 0; i < tester; i++) {
-                        result = result + testerNames[i] + " " + anchorArray[i] + "\n";
+                        result = result + anchorArray[i] + " " + resultantArray[i] + "\n";
                     }
                     window.alert(result);  
                     for (let i = 0; i < tester; i++) {
-                        document.writeln(testerNames[i]);
+                        document.writeln(anchorArray[i]);
                         document.write("<br>");
                     }
   
@@ -161,7 +161,7 @@
         <div class="tasks" style="color: black; ">
             <script>
                  for (let i = 0; i < tester; i++) {
-                        document.writeln(anchorArray[i]);
+                        document.writeln(resultantArray[i]);
                         document.write("<br>");
                     }
             </script>
@@ -173,7 +173,7 @@
                 document.writeln("Title:");
                 document.write("<br>");
                  for (let i = 0; i < tester; i++) {
-                        document.writeln(testerNames[i] + " : " + anchorArray[i]);
+                        document.writeln(anchorArray[i] + " : " + resultantArray[i]);
                         document.write("<br>");
                     }
             </script>
